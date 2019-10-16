@@ -1,5 +1,5 @@
-#ifndef LATTICE_H
-#define LATTICE_H
+#ifndef AUTOMATA_LATTICE_H
+#define AUTOMATA_LATTICE_H
 
 #include <cstddef>
 #include <algorithm>
