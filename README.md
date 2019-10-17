@@ -23,7 +23,7 @@ Here is the lattice gas automaton model, in which the particles on each grid mov
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
   
-  * openCV 
+* openCV 
 
 ## Basic Build Instructions
 
