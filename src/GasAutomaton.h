@@ -1,5 +1,5 @@
-#ifndef AUTOMATA_GASAUTOMATA_H
-#define AUTOMATA_GASAUTOMATA_H
+#ifndef AUTOMATON_GASAUTOMATA_H
+#define AUTOMATON_GASAUTOMATA_H
 
 #include <opencv2/opencv.hpp>
 #include <string>

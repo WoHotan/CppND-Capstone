@@ -1,5 +1,5 @@
-#ifndef AUTOMATA_CELLULAR_HPP
-#define AUTOMATA_CELLULAR_HPP
+#ifndef AUTOMATON_CELLULAR_H
+#define AUTOMATON_CELLULAR_H
 
 #include <random>
 #include "lattice.h"

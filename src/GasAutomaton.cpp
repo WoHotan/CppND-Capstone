@@ -2,26 +2,24 @@
 
 #define NO_FREE_PARTICLES
 
-inline cv::Vec3b rgb(Automata::dataType r, Automata::dataType g, Automata::dataType b) {
+inline cv::Vec3b rgb(Automaton::dataType r, Automaton::dataType g, Automaton::dataType b) {
     return {uchar(b), uchar(g), uchar(r)};
 }
-Automata::GasAutomaton::GasAutomaton(size_t totalSteps, std::string outputPath) :
+Automaton::GasAutomaton::GasAutomaton(size_t totalSteps, std::string outputPath) :
     CellularAutomaton(totalSteps), outputPath(std::move(outputPath)) {
-//  this->frame = cv::Mat::zeros(GasAutomaton::size, GasAutomaton::size, CV_8UC3);
     this->init();
 }
 
-void Automata::GasAutomaton::init() noexcept {
+void Automaton::GasAutomaton::init() noexcept {
     if (this->writer.isOpened()) {
         this->writer.release();
     }
-    this->writer
-        .open(this->outputPath,
-              CV_FOURCC('M', 'P', 'E', 'G'),
-              30,
-              cv::Size(GasAutomaton::size, GasAutomaton::size),
-              true
-        );
+    this->writer.open(this->outputPath,
+                      CV_FOURCC('M', 'P', 'E', 'G'),
+                      30,
+                      cv::Size(GasAutomaton::size, GasAutomaton::size),
+                      true
+                      );
     if (!this->writer.isOpened()) {
         this->_hasErrorOcurred = true;
         std::cout << "Cannot open file" << std::endl;
@@ -80,8 +78,6 @@ void Automata::GasAutomaton::applyRule() {
                 sw = get<Southwest>(x, y),
                 se = get<Southeast>(x, y),
                 sol = get<Solid>(x, y);
-
-            // TODO: Finish this...
 
             // n && !s && !sol || !n && s && sol || !n && !s && e && w
             set<North>(x, nneigh, (n && !s && !sol || !n && s && sol || !n && !s && e && w));
