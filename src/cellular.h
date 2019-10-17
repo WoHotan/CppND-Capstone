@@ -4,7 +4,7 @@
 #include <random>
 #include "lattice.h"
 
-namespace Automata {
+namespace Automaton {
   template<class T, ::std::size_t _size, bool auto_swap = false>
   class CellularAutomaton {
   public:

@@ -5,7 +5,7 @@
 #include <string>
 #include "cellular.h"
 
-namespace Automata {
+namespace Automaton {
     using dataType = unsigned short;
     class GasAutomaton : public CellularAutomaton<dataType, 400>
     {

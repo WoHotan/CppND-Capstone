@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
         iterations = std::stoi(argv[1]);
     }
     std::cout << "Starting GasAutomaton!" << std::endl;
-    Automato::GasAutomaton gasAutomaton(iterations, "./gasAutomaton.avi");
+    Automaton::GasAutomaton gasAutomaton(iterations, "./gasAutomaton.avi");
     gasAutomaton.execute();
     return 0;
 }

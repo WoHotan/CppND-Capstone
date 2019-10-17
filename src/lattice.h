@@ -4,7 +4,7 @@
 #include <cstddef>
 #include <algorithm>
 
-namespace Automata{
+namespace Automaton{
     template<class T, std::size_t _width, std::size_t _height = _width, std::size_t _align = 0>
     struct Lattice
     {
