@@ -5,6 +5,11 @@ add_definitions(-std=c++17)
 set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
-project(HelloWorld)
+find_package(OpenCV REQUIRED)
 
-add_executable(HelloWorld src/main.cpp)
+include_directories(${OPENCV_INCLUDE_DIRS})
+
+project(GasAutomaton)
+
+add_executable(GasAutomaton src/main.cpp src/lattice.h src/GasAutomaton.cpp src/cellular.h)
+target_link_libraries(${CMAKE_PROJECT_NAME} ${OpenCV_LIBS})
